@@ -15,7 +15,7 @@ class PersonE {
         age = _age
     }
     fun cetakInfo(){
-        println("Name : ${firstName} ${lastName}")
+        println("Name : ${firstName} ${lastName}")s
         println("Age : ${age}")
     }
 }
