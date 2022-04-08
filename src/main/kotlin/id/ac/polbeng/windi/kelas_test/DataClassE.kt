@@ -6,4 +6,4 @@ fun main() {
     val(name, age) = meri
     println("Name = $name")
     println("Age = $age")
-} 
+}
