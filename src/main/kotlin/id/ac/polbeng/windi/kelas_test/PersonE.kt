@@ -1,25 +1,25 @@
 package id.ac.polbeng.windi.kelas_test
-//Secara default kode  ter-generate secara otomatis
-class Employee(_id: Int, _name: String, _age: Int) {
-    val id: Int = _id
-        get() = field
 
-    var name: String = _name
-        //Getter
-        get() = field
-        //Setter
-        set(value) {
-            field = value
-        }
-
-    var age: Int = _age
-        get() = field
-        set(value) {
-            field = value
-        }
+class PersonE {
+    var firstName: String
+    var lastName: String
+    var age: Int = 25
+    constructor(_firstName: String, _lastName: String){
+        firstName = _firstName
+        lastName = _lastName
+    }
+    constructor(_firstName: String, _lastName: String, _age: Int): this(_firstName, _lastName){
+        age = _age
+    }
+    fun cetakInfo(){
+        println("Name : ${firstName} ${lastName}")
+        println("Age : ${age}")
+    }
 }
-
-fun main() {
-    val emp = Employee(1101, "Nia", 20)
-    println("Id : ${emp.id}, Nama : ${emp.name}, Umur : ${emp.age}")
+fun main(){
+    val anton = PersonE("Frank", "Lampard")
+    anton.cetakInfo()
+    println()
+    val budi = PersonE("Budi", "Gunawan", 21)
+    budi.cetakInfo()
 }
